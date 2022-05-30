@@ -1,0 +1,18 @@
+/*!
+Theme Name: Kallisto
+Author: Roman Dudnyk
+Author URI: http://dudnyk.rb@gmail.com
+Description:
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+Text Domain: lp
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/*Moving all direction (text, positions) via language type*/
+
+body, body select, body input, body textarea {
+    direction: rtl;
+}

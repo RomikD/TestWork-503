@@ -1,0 +1,13 @@
+div.main-title {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+  border-bottom: 0.5px solid var(--cr-def-text);
+  width: 100%;
+  font-size: 1.675rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--cr-def-text);
+  padding: 45px 0 10px 0;
+}

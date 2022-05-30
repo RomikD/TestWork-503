@@ -1,0 +1,52 @@
+/*!
+Theme Name: Kallisto
+Author: Roman Dudnyk
+Author URI: http://dudnyk.rb@gmail.com
+Version: 1.0.0
+*/
+
+/*------------------ Default code --------------------*/
+
+/*Import normalizer reset file from npm package*/
+@import "node_modules/normalize-scss/sass/normalize";
+
+/*Importing font-styles from font.css for display the Roboto Condensed font*/
+@import 'modules/font';
+
+@import "modules/reset";
+@import "modules/mainTitle";
+
+/*----------------- End Default code -----------------*/
+/*----------------------------------------------------*/
+/*------------------- Header code --------------------*/
+
+@import "modules/header";
+
+/*----------------- End Header code ------------------*/
+/*----------------------------------------------------*/
+/*------------------- Footer code --------------------*/
+
+@import "modules/footer";
+
+/*----------------- End Footer code ------------------*/
+/*----------------------------------------------------*/
+/*------------------ Homepage code -------------------*/
+
+@import "modules/archiveProducts";
+
+/*----------------- End Homepage code ----------------*/
+/*----------------------------------------------------*/
+/*----------------- Woocommerce code -----------------*/
+
+.woocommerce {
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+    width: 100%;
+    padding: 0 0 45px 0;
+}
+
+@import "modules/myAccount";
+
+/*--------------- End woocommerce code ---------------*/
+/*----------------------------------------------------*/

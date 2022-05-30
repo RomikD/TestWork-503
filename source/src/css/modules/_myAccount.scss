@@ -1,0 +1,517 @@
+.woocommerce-MyAccount-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  float: none;
+  width: 28%;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    list-style: none;
+    text-align: left;
+    color: var(--cr-def-text);
+    padding-top: 45px;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-content: center;
+      height: 48px;
+      width: 100%;
+
+      a {
+        display: block;
+        border-bottom: 1px solid transparent;
+        height: fit-content;
+        width: 100%;
+        text-decoration: none !important;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover a,
+      &:not(:last-child) a{
+        border-bottom: 1px solid var(--cr-def-text);
+      }
+
+      &.is-active {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  border-left: 1px solid var(--cr-def-border);
+  float: none;
+  width: 72%;
+  padding: 45px 45px;
+
+  p {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  legend,
+  .title {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    list-style: none;
+    text-align: left;
+    color: var(--cr-def-text);
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+
+    fieldset,
+    p,
+    span,
+    #add-product {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    p {
+      padding: 0;
+    }
+
+    fieldset {
+      legend {
+        padding-top: 25px;
+      }
+
+      .show-password-input {
+        position: absolute;
+        display: block;
+        top: 35px;
+        right: 15px;
+        width: fit-content;
+        transform: translate(-50%, -50%);
+        margin-left: auto;
+
+        &::before {
+          position: relative;
+          content: '\f06e';
+          font-family: "Font Awesome 5 Free", sans-serif;
+          font-size: 1.2rem;
+          font-weight: 700;
+          text-align: center;
+          color: var(--cr-post-text);
+        }
+      }
+    }
+
+    label {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 25px 0 15px 0;
+
+      .form-required,
+      .required {
+        width: fit-content;
+        padding: 0 5px;
+      }
+    }
+
+    .woocommerce-password-strength {
+      padding: 10px 0;
+    }
+
+    .form-group {
+      width: 100%;
+    }
+
+    .field-productTitle,
+    .field-productPrice {
+      width: calc(50% - 15px);
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="date"],
+    textarea,
+    select {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-content: center;
+      border: 1px solid var(--cr-def-border);
+      height: 52px;
+      width: 100%;
+      outline: none;
+      font-weight: 300;
+      padding: 0 25px;
+
+      &::placeholder {
+        opacity: 0.45;
+        color: var(--cr-def-text);
+      }
+    }
+
+    .form-select {
+      position: relative;
+      display: block;
+
+      &:after {
+        position: absolute;
+        content:"\f107";
+        background: var(--cr-def-border);
+        top: 63px;
+        right: 1px;
+        width: 38px;
+        height: 28px;
+        font-family: "FontAwesome", sans-serif;
+        text-align: center;
+        color: var(--cr-def-white);
+        pointer-events: none;
+        padding: 12px 8px;
+        z-index: 1;
+      }
+    }
+
+    input[type="file"],
+    button {
+      background-color: var(--cr-def-text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--cr-def-text);
+      height: 54px;
+      width: 200px;
+      outline: none;
+      font-weight: 300;
+      color: var(--cr-def-white);
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+
+    .field-productImage {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      label {
+        width: 100%;
+      }
+
+      input[type="file"] {
+        font-size: 0;
+        margin-right: 25px;
+        padding: 0;
+
+        &::-webkit-file-upload-button {
+          visibility: hidden;
+        }
+
+        &::before {
+          position: relative;
+          content: 'File choose';
+          background-color: var(--cr-def-text);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          font-size: 1.2rem;
+          font-weight: 300;
+          color: var(--cr-def-white);
+        }
+
+        &:active::before {
+          background-color: var(--cr-def-border);
+        }
+      }
+    }
+
+    textarea {
+      min-height: 128px;
+      height: auto;
+      resize: vertical;
+      padding: 25px;
+    }
+
+    .field-productPublish {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 35px 0 0 0;
+
+      button {
+        margin-right: 25px;
+      }
+    }
+
+    .checkbox-group {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+
+      label {
+        width: auto;
+      }
+
+      .form-checkbox-inline {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      label {
+        padding: 0 8px 0 4px;
+      }
+
+      input[type="checkbox"] {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--cr-def-border);
+        height: 27px;
+        width: 27px;
+        margin: 0 10px;
+        cursor: pointer;
+
+        &:after {
+          position: relative;
+          content: '\f00c';
+          font-family: "Font Awesome 5 Free", sans-serif;
+          font-size: 1rem;
+          font-weight: 700;
+          text-align: center;
+          color: var(--cr-post-text);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.4s ease-in-out;
+        }
+
+        &:checked:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+#woocommerce-login {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--cr-def-border);
+  max-width: 420px;
+  width: 100%;
+  margin: 45px auto;
+  padding: 25px;
+
+  .title {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    list-style: none;
+    text-align: left;
+    color: var(--cr-def-text);
+    padding-bottom: 15px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .woocommerce-form-login__rememberme {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  button {
+    background-color: var(--cr-def-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cr-def-text);
+    height: 54px;
+    width: 100%;
+    outline: none;
+    font-weight: 300;
+    color: var(--cr-def-white);
+    padding: 5px 15px;
+  }
+
+  input:not([type="checkbox"]) {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    border: 1px solid var(--cr-def-border);
+    height: 52px;
+    width: 100%;
+    outline: none;
+    font-weight: 300;
+    padding: 0 25px;
+
+    &::placeholder {
+      opacity: 0.45;
+      color: var(--cr-def-text);
+    }
+  }
+
+  input[type="checkbox"] {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cr-def-border);
+    height: 27px;
+    width: 27px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+
+    &:after {
+      position: relative;
+      content: '\f00c';
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--cr-post-text);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:checked:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media only screen and(max-width: 850px) {
+  .woocommerce-MyAccount-content {
+    padding: 45px 15px;
+
+    .content {
+      padding: 45px 15px;
+    }
+
+    form {
+      .field-productTitle,
+      .field-productPrice {
+        width: 100%;
+      }
+
+      button {
+        width: 170px;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 786px) {
+  .woocommerce-MyAccount-navigation {
+    width: 100%;
+  }
+  .woocommerce-MyAccount-content {
+    border: none;
+    width: 100%;
+    padding: 0 0 45px 0;
+  }
+  .woocommerce-account {
+    .woocommerce {
+      flex-direction: column;
+    }
+ }
+}
+
+@media only screen and(max-width: 600px) {
+  .woocommerce-account {
+    #main {
+      .container {
+        padding: 0;
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-content {
+    form {
+
+      .field-productImage {
+        input[type=file] {
+          margin: 0;
+        }
+      }
+
+      .field-productPublish {
+        button {
+          margin-right: 0;
+        }
+      }
+
+      input[type=file],
+      button {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .checkbox-group {
+        label {
+          padding: 0 4px 0 4px;
+        }
+        input[type=checkbox] {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

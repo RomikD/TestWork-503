@@ -1,0 +1,34 @@
+{
+  "name": "kallisto",
+  "version": "1.0.1",
+  "description": "This is wordpress theme made by Roman Dudnyk.The theme name is kallisto which used to make good site and products",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --build"
+  },
+  "keywords": [
+    "Worpdress"
+  ],
+  "author": "Roman Dudnyk",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-group-css-media-queries": "1.2.2",
+    "gulp-if": "3.0.0",
+    "gulp-notify": "4.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "sass": "1.49.7",
+    "webpack": "5.68.0",
+    "webpack-stream": "7.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
+}
