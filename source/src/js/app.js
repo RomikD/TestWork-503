@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#masthead .menu-btn').addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this).classList.toggle('checked');
+        document.querySelector('#masthead .menu-btn').classList.toggle('checked');
         document.querySelector('#fixed-menu').classList.toggle('active');
         document.querySelector('body').classList.toggle('stop');
     });
